@@ -65,9 +65,9 @@ class Service implements CacheInterface
      * @param mixed $manager
      * @param mixed $path
      *
-     * @return NetteManager
+     * @return self|NetteManager
      */
-    public function instantiateManager(mixed $config, mixed $manager, mixed $path): NetteManager
+    public function instantiateManager(mixed $config, mixed $manager, mixed $path): self|NetteManager
     {
         return \is_null($manager) ? new NetteManager($config, $path) : $manager;
     }
